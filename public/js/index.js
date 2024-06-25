@@ -7,11 +7,6 @@ const $spanYears = document.getElementById ('spanYears');
 const $spanMonths = document.getElementById('spanMonths');
 const $spanDays = document.getElementById('spanDays');
 
-const expReg ={
-  patronDiayMes : /^[0-9]{0,2}$/,
-   patronAño : /^[0-9]{0,4}$/
-}
-
 const validarForm = (e) => {
 
 switch (e.target.name) {
@@ -25,12 +20,15 @@ switch (e.target.name) {
     break;
 
     case "month":
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
+
       if (e.target.value.length > 2) {
         e.target.value = e.target.value.slice(0, 2);
       }
     break;
 
     case "year":
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
 
     if (e.target.value.length > 4) {
       e.target.value = e.target.value.slice(0, 4);
