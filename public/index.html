@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon-calendar.png">
+  
+  <title>Age calculator</title>
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body class="h-full">
+  <main class="flex justify-center md:items-center mt-8 sm:mt-0 h-full">
+    <div class=" mx-auto my-auto shadow-2xl rounded-br-big w-11/12 lg:w-2/4 h-96">
+      <div class='flex flex-col gap-8 p-4 text-center w-4/5 h-full'>
+        <div class="border-b-2 ">
+          <form class="flex w-full p-4 gap-x-1" id="form">
+            <div class="flex flex-col" id="group_day">
+              <label class="text-smokeygrey font-bold text-left text-xs uppercase" for="day" id="labelDay">Day</label>
+              <input class="border border-lightgrey rounded-md font-bold w-full sm:w-3/4 h-10 p-2" name="day" id="day" min="1" max="31" type="number" placeholder="DD"  required title="Ingresar un valor valido">
+            </div>
+            <div class="flex flex-col">
+              <label class="text-smokeygrey font-bold text-left text-xs uppercase" for="month" id="labelMonth" >Month</label>
+              <input class="border border-lightgrey rounded-md font-bold w-full sm:w-4/5 h-10 p-2" name="month" id="month" min="1" max="12" type="number" placeholder="MM" required>
+            </div>
+            <div class="flex flex-col">
+              <label class="text-smokeygrey font-bold text-left text-xs uppercase" for="year" id="labelYear">Year</label>
+              <input class="border border-lightgrey rounded-md font-bold w-5/6 sm:w-2/4 h-10 p-2" name="year" id="year" maxlength="4" type="number" placeholder="YYYY" required>
+            </div>
+          </form>
+        </div>
+      
+        <div class=" flex flex-col justify-between text-left pl-4 text-4xl md:text-6xl font-bold italic">
+          <p><span class="text-purple mr-4" id="spanYears">--</span>years</p>
+          <p><span class="text-purple mr-4" id="spanMonths">--</span>months</p>
+          <p><span class="text-purple mr-4" id="spanDays">--</span>days</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/index.js"></script>
+</body>
+</html>
